@@ -18,7 +18,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command-prefix: npx cypress run
-          command:  --spec cypress/e2e/tests/addtocartTest.cy.js
+          command:  cypress/e2e/tests/addtocartTest.cy.js
 
   Reg-flow-run:
     runs-on: ubuntu-latest
@@ -32,4 +32,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command-prefix: npx cypress run
-          command:  --spec cypress/e2e/tests/registerTest.cy.js
+          command:  cypress/e2e/tests/registerTest.cy.js
