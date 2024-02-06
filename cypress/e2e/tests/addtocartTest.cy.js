@@ -11,7 +11,7 @@ describe('automating homepage', ()=> {
     it('add to cart Flow', ()=>{
         homeObj.clickSearchInputField(testData.Product.productName)
         homeObj.productAddtocCart()
-       // homeObj.verifyValidationMessage().should('contain',testData.message.successMessage),and('contains',testData.Product)
+        //homeObj.verifyValidationMessage().should('contain',testData.message.successMessage).and('contain',testData.Product.productName)
         
     })
 

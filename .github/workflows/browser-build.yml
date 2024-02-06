@@ -1,14 +1,20 @@
 name: Browser Test
-on: push
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress run with Firefox
         uses: cypress-io/github-action@v6
         with:
-            command: firefox
+          browser: firefox

@@ -1,26 +1,35 @@
 name: Regression End-to-end tests
-on: push
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   Add-To-Cart-flow-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       # Install npm dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress run Add-To-Cart
         uses: cypress-io/github-action@v6
         with:
-            command: npm run test:addtocart
+          command-prefix: npm run
+          command: test:addtocart
 
   Reg-flow-run:
-                runs-on: ubuntu-22.04
-                steps:
-                  - name: Checkout
-                    uses: actions/checkout@v4
-                  # Install npm dependencies, cache them correctly
-                  # and run all Cypress tests
-                  - name: Cypress run
-                    uses: cypress-io/github-action@v6
-                    with:
-                        command: npm run test:registerTest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run RegisterTest
+        uses: cypress-io/github-action@v6
+        with:
+          command-prefix: npm run
+          command: test:registerTest
