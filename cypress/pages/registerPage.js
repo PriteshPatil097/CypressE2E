@@ -12,8 +12,6 @@ confirmPassword: '#input-confirm',
 policyCheck: 'input[type="checkbox"]',
 continuebtn: '.pull-right > .btn'
 
-
-
 }
 OpenURL(){
     cy.visit(Cypress.env('URL'))
@@ -44,5 +42,4 @@ cy.get(this.weblocators.policyCheck).click()
 enterContinuebtn(){
     cy.get(this.weblocators.continuebtn).click()
 }
-
 }
