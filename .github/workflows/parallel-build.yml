@@ -17,8 +17,8 @@ jobs:
       - name: Cypress run Add-To-Cart
         uses: cypress-io/github-action@v6
         with:
-          command-prefix: npx cypress run
-          command:  test:registerTest
+          command-prefix: npx run
+          command: npx run test:registerTest
 
   Reg-flow-run:
     runs-on: ubuntu-latest
@@ -31,5 +31,5 @@ jobs:
       - name: Cypress run RegisterTest
         uses: cypress-io/github-action@v6
         with:
-          command-prefix: npx cypress run
-          command:  test:addtocart
+          command-prefix: npx run
+          command: npx run test:addtocart
