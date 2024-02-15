@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test:addtocart": "npx cypress run --spec cypress/e2e/tests/addtocartTest.cy.js",
-    "test:registerTest":"npx cypress run --spec cypress/e2e/tests/registerTest.cy.js",
+    "test:registerTest": "npx cypress run --spec cypress/e2e/tests/registerTest.cy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -136,6 +136,7 @@
     "minimatch": "^3.1.2",
     "minimist": "^1.2.8",
     "ms": "^2.1.2",
+    "neat-csv": "^7.0.0",
     "npm-run-path": "^4.0.1",
     "object-inspect": "^1.13.1",
     "once": "^1.4.0",
